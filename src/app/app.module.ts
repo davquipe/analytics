@@ -8,9 +8,12 @@ import { HomeComponent } from './pages/home/home.component';
 
 import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
 import { GoogleLoginProvider } from 'angularx-social-login';
+import { ChartsModule } from 'ng2-charts';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ExportAsModule } from 'ngx-export-as';
+import { MyBarChartComponent } from './pages/my-bar-chart/my-bar-chart.component';
+import { PagenofouundComponent } from './pages/pagenofouund/pagenofouund.component';
 
 
 const googleLoginOptions: any = {
@@ -22,14 +25,17 @@ const googleLoginOptions: any = {
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    MyBarChartComponent,
+    PagenofouundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SocialLoginModule,
     HttpClientModule,
-    ExportAsModule
+    ExportAsModule,
+    ChartsModule
   ],
   providers: [
     {

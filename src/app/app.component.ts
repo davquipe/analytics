@@ -13,7 +13,7 @@ export class AppComponent {
   public datos: any [] = [];
 
   exportAsConfig: ExportAsConfig  = {
-    type: 'csv', // the type you want to download
+    type: 'xlsx', // the type you want to download
     elementIdOrContent: 'hola', // the id of html/table element
   }
   

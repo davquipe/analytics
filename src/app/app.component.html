@@ -26,27 +26,26 @@
 <button class="btn btn-primary" (click)="exportarExcel()">Exportar</button>
 
 <div class="table-responsive">
-  <table class="table" id="hola">
+  <table class="table table-striped" id="hola">
     <thead>
       <tr>
-        <th scope="col">Dia</th>
-        <th scope="col">Pais</th>
         <th scope="col">Ciudad</th>
-        <th scope="col">Ruta de la pagina</th>
-        <th scope="col">Profundidad de la pagina</th>
-        <th scope="col">Palabra clave</th>
-        <th scope="col">Fuente</th>
+        <th scope="col">Dia</th>
         <th scope="col">Exito</th>
-        <th scope="col">Sesiones</th>
+        <th scope="col">Fuente</th>
+        <th scope="col">Objectivo Completo</th>
+        <th scope="col">Objectivo Convertido</th>
+        <th scope="col">Objectivo Inicio</th>
+        <th scope="col">Objectivo Valor</th>
+        <th scope="col">Paginsv Sesion</th>
+        <th scope="col">Pais</th>
+        <th scope="col">Palabra clave</th>
+        <th scope="col">Profundidad de la pagina</th>
         <th scope="col">Rebote</th>
+        <th scope="col">Ruta de la pagina</th>
+        <th scope="col">Sesiones</th>
         <th scope="col">Tarifa de entrada</th>
-        <th scope="col">Persistencia</th>
-        <th scope="col">paginsv_sesion</th>
-        <th scope="col">objectivo_inicio</th>
-        <th scope="col">objectivo_completo</th>
-        <th scope="col">objectivo_convertido</th>
-        <th scope="col">objectivo_convertido</th>
-        <th scope="col">objectivo_valor</th>
+        <th scope="col">Tiempo Pagina</th>
       </tr>
     </thead>
     <tbody>
@@ -72,4 +71,8 @@
     </tbody>
   </table>
 </div>
-<router-outlet></router-outlet>
+
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
