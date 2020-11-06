@@ -19,5 +19,57 @@
 </div>
 
 
+<br>
+<br>
+<br>
 
+<button class="btn btn-primary" (click)="exportarExcel()">Exportar</button>
+
+<div class="table-responsive">
+  <table class="table" id="hola">
+    <thead>
+      <tr>
+        <th scope="col">Dia</th>
+        <th scope="col">Pais</th>
+        <th scope="col">Ciudad</th>
+        <th scope="col">Ruta de la pagina</th>
+        <th scope="col">Profundidad de la pagina</th>
+        <th scope="col">Palabra clave</th>
+        <th scope="col">Fuente</th>
+        <th scope="col">Exito</th>
+        <th scope="col">Sesiones</th>
+        <th scope="col">Rebote</th>
+        <th scope="col">Tarifa de entrada</th>
+        <th scope="col">Persistencia</th>
+        <th scope="col">paginsv_sesion</th>
+        <th scope="col">objectivo_inicio</th>
+        <th scope="col">objectivo_completo</th>
+        <th scope="col">objectivo_convertido</th>
+        <th scope="col">objectivo_convertido</th>
+        <th scope="col">objectivo_valor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let d of datos">
+        <th>{{d.ciudad}}</th>
+        <th>{{d.dia}}</th>
+        <th>{{d.exito}}</th>
+        <th>{{d.fuente}}</th>
+        <th>{{d.objectivo_completo}}</th>
+        <th>{{d.objectivo_convertido}}</th>
+        <th>{{d.objectivo_inicio}}</th>
+        <th>{{d.objectivo_valor}}</th>
+        <th>{{d.paginsv_sesion}}</th>
+        <th>{{d.pais}}</th>
+        <th>{{d.palabra_clave}}</th>
+        <th>{{d.prof_pagina}}</th>
+        <th>{{d.rebote}}</th>
+        <th>{{d.ruta_pagina}}</th>
+        <th>{{d.sesiones}}</th>
+        <th>{{d.tarifa_entrada}}</th>
+        <th>{{d.tiempo_pagina}}</th>
+      </tr>
+    </tbody>
+  </table>
+</div>
 <router-outlet></router-outlet>

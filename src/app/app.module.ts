@@ -10,6 +10,7 @@ import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-logi
 import { GoogleLoginProvider } from 'angularx-social-login';
 
 import { HttpClientModule } from '@angular/common/http';
+import { ExportAsModule } from 'ngx-export-as';
 
 
 const googleLoginOptions: any = {
@@ -27,7 +28,8 @@ const googleLoginOptions: any = {
     BrowserModule,
     AppRoutingModule,
     SocialLoginModule,
-    HttpClientModule
+    HttpClientModule,
+    ExportAsModule
   ],
   providers: [
     {
