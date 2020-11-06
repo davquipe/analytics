@@ -9,6 +9,14 @@ import { HomeComponent } from './pages/home/home.component';
 import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
 import { GoogleLoginProvider } from 'angularx-social-login';
 
+import { HttpClientModule } from '@angular/common/http';
+
+
+const googleLoginOptions: any = {
+  scope: 'openid profile email https://www.googleapis.com/auth/analytics.readonly'
+};
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,27 +26,25 @@ import { GoogleLoginProvider } from 'angularx-social-login';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SocialLoginModule
+    SocialLoginModule,
+    HttpClientModule
   ],
   providers: [
     {
       provide: 'SocialAuthServiceConfig',
       useValue: {
         autoLogin: false,
-        providers: [{
-          provide: 'SocialAuthServiceConfig',
-          useValue: {
-            autoLogin: false,
-            providers: [
-              {
-                id: GoogleLoginProvider.PROVIDER_ID,
-                provider: new GoogleLoginProvider(
-                  'clientId'
-                ),
-              },
-            ],
-          } as SocialAuthServiceConfig,
-        }
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(
+              '681971571095-ubva1fj2lqdfdop81cajl7c8fam24h27.apps.googleusercontent.com',
+              googleLoginOptions
+            ),
+          }
+        ],
+      } as SocialAuthServiceConfig
+    }
   ],
   bootstrap: [AppComponent]
 })
